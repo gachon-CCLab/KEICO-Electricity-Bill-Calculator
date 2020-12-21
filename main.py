@@ -1,3 +1,5 @@
+from calc_Charge.CalcHome import *
+from calc_Charge.CalcGeneral import *
 from calc_Charge.CalcIndustry import *  # 일반용, 산업용 요금 유사.   # 일반용 을 == 산업용 을
 
 if __name__ == '__main__':
@@ -24,18 +26,19 @@ if __name__ == '__main__':
     class_contract: int = 0
 
     #####TEST-HOME###############################################################
-    # used_amount_list[0] = 1204      # 1월 사용량
-    # used_amount_list[1] = 1203
-    # used_amount_list[2] = 1202
-    # used_amount_list[3] = 1201
-    # used_amount_list[4] = 1111
-    # used_amount_list[5] = 1123
-    # used_amount_list[6] = 1213
-    # used_amount_list[7] = 1521
-    # used_amount_list[8] = 1234
-    # used_amount_list[9] = 1123
-    # used_amount_list[10] = 1423
-    # used_amount_list_home[11] = 1204
+    used_amount_list_home[0] = 1204  # 1월 사용량
+    used_amount_list_home[1] = 1203
+    used_amount_list_home[2] = 1202
+    used_amount_list_home[3] = 1201
+    used_amount_list_home[4] = 1111
+    used_amount_list_home[5] = 1123
+    used_amount_list_home[6] = 1213
+    used_amount_list_home[7] = 1521
+    used_amount_list_home[8] = 1234
+    used_amount_list_home[9] = 1123
+    used_amount_list_home[10] = 1423
+    used_amount_list_home[11] = 1204
+    voltage_factor = 0
     # print(used_amount_list_home)
     #############################################################################
 
@@ -66,28 +69,28 @@ if __name__ == '__main__':
     # used_amount_list_industry[3] = [1, 1, 1]
     # used_amount_list_industry[4] = [1, 1, 1]
     # used_amount_list_industry[5] = [1, 1, 1]
-    used_amount_list_industry[6] = [1, 1, 1]
+    # used_amount_list_industry[6] = [1, 1, 1]
     # used_amount_list_industry[7] = [5, 300, 20]
     # used_amount_list_industry[8] = [1, 1, 1]
     # used_amount_list_industry[9] = [1, 1, 1]
     # used_amount_list_industry[10] = [1, 1, 1]
     # used_amount_list_industry[11] = [1, 1, 1]
-    contract_demand = 1
-    class1 = 2
-    class2 = 0
-    class_contract = 0
-    print(used_amount_list_industry)
+    # contract_demand = 1
+    # class1 = 2
+    # class2 = 0
+    # class_contract = 0
+    # print(used_amount_list_industry)
     #############################################################################
 
     #############################################################################
-    # a = CalcHome(used_amount_list_home, voltage_factor)
-    # a_result = int(a.init_calc())  # 전기요금계(기본요금 + 전력량요금)
-    # a_tax1 = round(a_result * 0.1)  # 부가가치세  # 사사오입
-    # a_tax2 = int((a_result * 0.037) - ((a_result * 0.037) % 10))  # 전련산업기반기금  # 10원미만 절사
-    # print("전기 요금계 :", a_result)
-    # print("부가가치세 :", a_tax1)
-    # print("전력산업기반기금 :", a_tax2)
-    # print("청구금액 :", int(a_result + round(a_result * 0.1) + int(a_result * 0.037)))
+    a = CalcHome(used_amount_list_home, voltage_factor)
+    a_result = int(a.init_calc())  # 전기요금계(기본요금 + 전력량요금)
+    a_tax1 = round(a_result * 0.1)  # 부가가치세  # 사사오입
+    a_tax2 = int((a_result * 0.037) - ((a_result * 0.037) % 10))  # 전련산업기반기금  # 10원미만 절사
+    print("전기 요금계 :", a_result)
+    print("부가가치세 :", a_tax1)
+    print("전력산업기반기금 :", a_tax2)
+    print("청구금액 :", int(a_result + round(a_result * 0.1) + int(a_result * 0.037)))
 
     # b = CalcGeneral(used_amount_list_general, contract_demand, class1, class2, class_contract)
     # b_result = int(b.init_calc())  # 전기요금계(기본요금 + 전력량요금)
@@ -98,12 +101,12 @@ if __name__ == '__main__':
     # print("전력산업기반기금 :", b_tax2)
     # print("청구금액 :", int(b_result + round(b_result * 0.1) + int(b_result * 0.037)))
 
-    c = CalcIndustry(used_amount_list_industry, contract_demand, class1, class2, class_contract)
-    c_result = int(c.init_calc())       # 전기요금계(기본요금 + 전력량요금)
-    c_tax1 = round(c_result * 0.1)     # 부가가치세  # 사사오입
-    c_tax2 = int((c_result * 0.037) - ((c_result * 0.037) % 10))    # 전련산업기반기금  # 10원미만 절사
-    print("전기 요금계 :", c_result)
-    print("부가가치세 :", c_tax1)
-    print("전력산업기반기금 :", c_tax2)
-    print("청구금액 :", int(c_result + round(c_result * 0.1) + int(c_result * 0.037)))
+    # c = CalcIndustry(used_amount_list_industry, contract_demand, class1, class2, class_contract)
+    # c_result = int(c.init_calc())       # 전기요금계(기본요금 + 전력량요금)
+    # c_tax1 = round(c_result * 0.1)     # 부가가치세  # 사사오입
+    # c_tax2 = int((c_result * 0.037) - ((c_result * 0.037) % 10))    # 전련산업기반기금  # 10원미만 절사
+    # print("전기 요금계 :", c_result)
+    # print("부가가치세 :", c_tax1)
+    # print("전력산업기반기금 :", c_tax2)
+    # print("청구금액 :", int(c_result + round(c_result * 0.1) + int(c_result * 0.037)))
     #############################################################################

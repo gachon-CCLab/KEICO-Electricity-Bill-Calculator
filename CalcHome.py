@@ -12,11 +12,9 @@ class CalcHome(CalcCharge):
         winter: bool = 0  # 겨울
         voltage_factor: bool = 0  # 0: 저압, 1: 고압
 
-        ####TEST####
-        voltage_factor = 1
-        ############
-
         for i in range(12):
+            summer: bool = 0  # 여름
+            winter: bool = 0  # 겨울
             if self.used_amount_list[i] != 0:
                 if 6 <= i <= 7:
                     summer = 1
