@@ -9,7 +9,7 @@ if __name__ == '__main__':
     used_amount_list_general = [[0 for i in range(3)] for j in range(12)]   # 2차원 배열 초기화
     used_amount_list_industry = [[0 for i in range(3)] for j in range(12)]  # 2차원 배열 초기화
 
-    contract_demand: int = 0   # 계약 전력(kWh)
+    contract_demand: int = 0   # 계약 전력(kWh)  # 4kWh 이상?
     charge: float = 0
 
     voltage_factor = 0  # 0: 저압, 1: 고압 (in home Calc)
@@ -43,70 +43,63 @@ if __name__ == '__main__':
     #############################################################################
 
     #####TEST-General###############################################################
-    # used_amount_list_general[0] = [1, 1, 1]      # 1월 사용량   # 계약전력으로 구분되지 않을 경우 index [0]에 사용량.
-    # used_amount_list_general[1] = [1, 1, 1]
-    # used_amount_list_general[2] = [1, 1, 1]
-    # used_amount_list_general[3] = [1, 1, 1]
-    # used_amount_list_general[4] = [1, 1, 1]
-    # used_amount_list_general[5] = [1, 1, 1]
-    # used_amount_list_general[6] = [1, 1, 1]
-    # used_amount_list_general[7] = [5, 300, 20]
-    # used_amount_list_general[8] = [1, 1, 1]
-    # used_amount_list_general[9] = [1, 1, 1]
-    # used_amount_list_general[10] = [1, 1, 1]
-    # used_amount_list_general[11] = [1, 1, 1]
-    contract_demand = 1
-    class1 = 2
-    class2 = 2
-    class_contract = 2
+    used_amount_list_general[0] = [1, 1, 1]      # 1월 사용량   # 계약전력으로 구분되지 않을 경우 index [0]에 사용량.
+    used_amount_list_general[1] = [1, 1, 1]
+    used_amount_list_general[2] = [1, 1, 1]
+    used_amount_list_general[3] = [1, 1, 1]
+    used_amount_list_general[4] = [1, 1, 1]
+    used_amount_list_general[5] = [1, 1, 1]
+    used_amount_list_general[6] = [1, 1, 1]
+    used_amount_list_general[7] = [5, 300, 20]
+    used_amount_list_general[8] = [1, 1, 1]
+    used_amount_list_general[9] = [1, 1, 1]
+    used_amount_list_general[10] = [1, 1, 1]
+    used_amount_list_general[11] = [1, 1, 1]
+    contract_demand = 10
+    class1 = 0
+    class2 = 0
+    class_contract = 0
     # print(used_amount_list_general)
     #############################################################################
 
     #####TEST-Industry###############################################################
-    # used_amount_list_industry[0] = [1, 1, 1]      # 1월 사용량   # 계약전력으로 구분되지 않을 경우 index [0]에 사용량.
-    # used_amount_list_industry[1] = [1, 1, 1]
-    # used_amount_list_industry[2] = [1, 1, 1]
-    # used_amount_list_industry[3] = [1, 1, 1]
-    # used_amount_list_industry[4] = [1, 1, 1]
-    # used_amount_list_industry[5] = [1, 1, 1]
-    # used_amount_list_industry[6] = [1, 1, 1]
-    # used_amount_list_industry[7] = [5, 300, 20]
-    # used_amount_list_industry[8] = [1, 1, 1]
-    # used_amount_list_industry[9] = [1, 1, 1]
-    # used_amount_list_industry[10] = [1, 1, 1]
-    # used_amount_list_industry[11] = [1, 1, 1]
-    # contract_demand = 1
-    # class1 = 2
-    # class2 = 0
-    # class_contract = 0
+    used_amount_list_industry[0] = [1, 1, 1]      # 1월 사용량   # 계약전력으로 구분되지 않을 경우 index [0]에 사용량.
+    used_amount_list_industry[1] = [1, 1, 1]
+    used_amount_list_industry[2] = [1, 1, 1]
+    used_amount_list_industry[3] = [1, 1, 1]
+    used_amount_list_industry[4] = [1, 1, 1]
+    used_amount_list_industry[5] = [1, 1, 1]
+    used_amount_list_industry[6] = [1, 1, 1]
+    used_amount_list_industry[7] = [5, 300, 20]
+    used_amount_list_industry[8] = [1, 1, 1]
+    used_amount_list_industry[9] = [1, 1, 1]
+    used_amount_list_industry[10] = [1, 1, 1]
+    used_amount_list_industry[11] = [1, 1, 1]
+    contract_demand = 51
+    class1 = 1
+    class2 = 1
+    class_contract = 0
     # print(used_amount_list_industry)
     #############################################################################
 
+    used_amount_list_home = [192, 1483, 1360, 741, 938, 943, 1954, 294, 1353, 216, 1543, 1346]
+    used_amount_list_general = [[1278, 1894, 551], [1844, 31, 78], [767, 761, 1650], [1365, 1862, 1228], [1959, 1826, 816], [524, 531, 494], [174, 1407, 1402], [849, 658, 1918], [898, 1045, 705], [1327, 79, 1181], [1460, 756, 805], [1022, 1775, 1950]]
     #############################################################################
-    a = CalcHome(used_amount_list_home, voltage_factor)
-    a_result = int(a.init_calc())  # 전기요금계(기본요금 + 전력량요금)
-    a_tax1 = round(a_result * 0.1)  # 부가가치세  # 사사오입
-    a_tax2 = int((a_result * 0.037) - ((a_result * 0.037) % 10))  # 전련산업기반기금  # 10원미만 절사
-    print("전기 요금계 :", a_result)
-    print("부가가치세 :", a_tax1)
-    print("전력산업기반기금 :", a_tax2)
-    print("청구금액 :", int(a_result + round(a_result * 0.1) + int(a_result * 0.037)))
+    # a = CalcHome(used_amount_list_home, voltage_factor)
+    # a_result = int(a.init_calc())  # 전기요금계(기본요금 + 전력량요금)
+    # # a_tax1 = round(a_result * 0.1)  # 부가가치세  # 사사오입
+    # # a_tax2 = int((a_result * 0.037) - ((a_result * 0.037) % 10))  # 전련산업기반기금  # 10원미만 절사
+    # print("청구금액 :", a_result)
 
-    # b = CalcGeneral(used_amount_list_general, contract_demand, class1, class2, class_contract)
-    # b_result = int(b.init_calc())  # 전기요금계(기본요금 + 전력량요금)
+    b = CalcGeneral(used_amount_list_general, contract_demand, class1, class2, class_contract)
+    b_result = int(b.init_calc())  # 전기요금계(기본요금 + 전력량요금)
     # b_tax1 = round(b_result * 0.1)  # 부가가치세  # 사사오입
     # b_tax2 = int((b_result * 0.037) - ((b_result * 0.037) % 10))  # 전련산업기반기금  # 10원미만 절사
-    # print("전기 요금계 :", b_result)
-    # print("부가가치세 :", b_tax1)
-    # print("전력산업기반기금 :", b_tax2)
-    # print("청구금액 :", int(b_result + round(b_result * 0.1) + int(b_result * 0.037)))
+    print("청구금액 :", b_result)
 
     # c = CalcIndustry(used_amount_list_industry, contract_demand, class1, class2, class_contract)
     # c_result = int(c.init_calc())       # 전기요금계(기본요금 + 전력량요금)
-    # c_tax1 = round(c_result * 0.1)     # 부가가치세  # 사사오입
-    # c_tax2 = int((c_result * 0.037) - ((c_result * 0.037) % 10))    # 전련산업기반기금  # 10원미만 절사
-    # print("전기 요금계 :", c_result)
-    # print("부가가치세 :", c_tax1)
-    # print("전력산업기반기금 :", c_tax2)
-    # print("청구금액 :", int(c_result + round(c_result * 0.1) + int(c_result * 0.037)))
+    # # c_tax1 = round(c_result * 0.1)     # 부가가치세  # 사사오입
+    # # c_tax2 = int((c_result * 0.037) - ((c_result * 0.037) % 10))    # 전련산업기반기금  # 10원미만 절사
+    # print("청구금액 :", c_result)
     #############################################################################
