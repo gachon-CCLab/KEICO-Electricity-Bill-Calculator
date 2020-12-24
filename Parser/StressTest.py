@@ -74,7 +74,7 @@ used_amount_list_industry = [[0 for i in range(3)] for j in range(12)]  # 2차�
 success_count: int = 0
 failure_count: int = 0
 
-for i in range(100):
+for i in range(1000):
     contract_demand: int  # 계약 전력(kWh)  # 4kWh 이상?
     charge: float = 0
 
