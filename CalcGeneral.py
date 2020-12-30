@@ -1,5 +1,6 @@
 from calc_Charge.CalcCharge import *
 
+
 class CalcGeneral(CalcCharge):
     def __init__(self, used_amount_list_, contract_demand, class1, class2, class_contract):
         self.used_amount_list = used_amount_list_
