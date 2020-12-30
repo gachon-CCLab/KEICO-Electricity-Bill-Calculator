@@ -1,5 +1,5 @@
 # calc_Charge
-<ul>main.py : 입출력 이용</ul>
+<ul>main.py : 입출력에 이용</ul>
 <ul>Parser/requirements.txt : 테스트 파일의 dependancy</ul>
 <ul>Parser/StressTest.py : 한전 계산기와 크로스 체크</ul>
 <h2>to-do-list</h2>
