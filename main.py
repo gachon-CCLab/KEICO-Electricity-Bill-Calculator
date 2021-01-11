@@ -86,20 +86,20 @@ if __name__ == '__main__':
     used_amount_list_general = [[1278, 1894, 551], [1844, 31, 78], [767, 761, 1650], [1365, 1862, 1228], [1959, 1826, 816], [524, 531, 494], [174, 1407, 1402], [849, 658, 1918], [898, 1045, 705], [1327, 79, 1181], [1460, 756, 805], [1022, 1775, 1950]]
     #############################################################################
     # a = CalcHome(used_amount_list_home, voltage_factor)
-    # a_result = int(a.init_calc())  # 전기요금계(기본요금 + 전력량요금)
-    # # a_tax1 = round(a_result * 0.1)  # 부가가치세  # 사사오입
-    # # a_tax2 = int((a_result * 0.037) - ((a_result * 0.037) % 10))  # 전련산업기반기금  # 10원미만 절사
+    # # 전기요금계(기본요금 + 전력량요금)
+    # # 부가가치세  # 사사오입
+    # # 전련산업기반기금  # 10원미만 절사
     # print("청구금액 :", a_result)
 
     b = CalcGeneral(used_amount_list_general, contract_demand, class1, class2, class_contract)
     b_result = int(b.init_calc())  # 전기요금계(기본요금 + 전력량요금)
-    # b_tax1 = round(b_result * 0.1)  # 부가가치세  # 사사오입
-    # b_tax2 = int((b_result * 0.037) - ((b_result * 0.037) % 10))  # 전련산업기반기금  # 10원미만 절사
+    # 부가가치세  # 사사오입
+    # 전련산업기반기금  # 10원미만 절사
     print("청구금액 :", b_result)
 
     # c = CalcIndustry(used_amount_list_industry, contract_demand, class1, class2, class_contract)
-    # c_result = int(c.init_calc())       # 전기요금계(기본요금 + 전력량요금)
-    # # c_tax1 = round(c_result * 0.1)     # 부가가치세  # 사사오입
-    # # c_tax2 = int((c_result * 0.037) - ((c_result * 0.037) % 10))    # 전련산업기반기금  # 10원미만 절사
+    # # 전기요금계(기본요금 + 전력량요금)
+    # # 부가가치세  # 사사오입
+    # # 전련산업기반기금  # 10원미만 절사
     # print("청구금액 :", c_result)
     #############################################################################
