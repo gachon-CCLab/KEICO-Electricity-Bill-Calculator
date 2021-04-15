@@ -6,6 +6,7 @@ import pandas as pd
 import datetime
 
 
+# UPDATE
 # convertToMonth의 계산부
 def seperateResult(_result):
     result = _result
@@ -84,6 +85,7 @@ def seperateResult(_result):
     return data
 
 
+# UPDATE
 # user_data to month_data
 def convertToMonth(db, info):
     mysql_local = db
@@ -115,6 +117,7 @@ def convertToMonth(db, info):
     ########################################################
 
 
+# UPDATE
 # convertToCost의 계산부
 # 요금 계산 처리 후 DB에 넣을 수 있도록 정렬된 값 return
 def calcResult(_result):
@@ -202,6 +205,7 @@ def calcResult(_result):
     return data
 
 
+# UPDATE
 # month_data to month_cost
 def convertToCost(db):
     mysql_local = db
@@ -221,8 +225,8 @@ def convertToCost(db):
 
     # SQL
     sql = "INSERT INTO MONTH_COST (YEAR, MONTH, USERS_UID, LIGHT_LOAD_KRW, MID_LOAD_KRW, PEAK_LOAD_KRW, SELECTOR)" \
-          "VALUES(%s, %s, %s, %s, %s, %s, %s, %s);"
-    cursor.execute(sql, data)===================
+          "VALUES(%s, %s, %s, %s, %s, %s, %s);"
+    cursor.execute(sql, data)
     mysql_local.commit()
 
     sql = "SELECT * FROM MONTH_COST;"
@@ -233,6 +237,7 @@ def convertToCost(db):
 
 
 # Working
+# CREATE
 # 딕셔너리를 받아 user_data에 새로운 유저 데이터를 insert 해줌.
 def insertUserData(db, _dict):   # dict : DATE / USERS_UID / PID / CONTRACT_KW / USAGE / SELECTOR
     mysql_local = db
@@ -246,6 +251,7 @@ def insertUserData(db, _dict):   # dict : DATE / USERS_UID / PID / CONTRACT_KW /
 
 
 # Working
+# READ
 # 유저의 전기 사용량 조회
 def showUsage(db, user_info):   # user_info : dictionary
     mysql_local = db
@@ -255,7 +261,9 @@ def showUsage(db, user_info):   # user_info : dictionary
 
     sql = "SELECT USAGE FROM month_data WHERE UID = %s AND PID = %s; "
 
+
 # Working
+# DELETE
 # 유저의 데이터 일괄 삭제
 
 if __name__ == '__main__':
