@@ -1,4 +1,4 @@
-# calc_Charge
+# Electricity-Bill-Calculator
 <ul>main.py : 단순 입출력에 이용</ul>
 <ul>init.py : DB 입출력</ul>
 <ul>Parser/requirements.txt : 테스트 파일의 dependancy</ul>
@@ -11,3 +11,13 @@
 <ul></ul>
 </h5>
 <hr>
+
+# 프로젝트소개
+
+# 핵심기능
+
+# 프로젝트 구조
+
+# 기술스택
+
+# 업데이트 내역
