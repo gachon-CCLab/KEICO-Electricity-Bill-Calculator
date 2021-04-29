@@ -19,6 +19,7 @@ class CalcHome(CalcCharge):
         # winter: bool = 0  # 겨울
         # voltage_factor: bool = 0  # 0: 저압, 1: 고압
         tmp_charge: float
+        env_contribution, fuel_rate = CalcCharge.get_conf(self)
 
         for i in range(12):
             summer: bool = 0  # 여름
@@ -37,6 +38,11 @@ class CalcHome(CalcCharge):
                         result = result - 2500
                     if result < 1000:
                         result = 1000
+
+                used_sum = self.used_amount_list[i]
+                result = self.get_precise(result + used_sum * env_contribution)   # 환경부담금
+                result = self.get_precise(result + used_sum * fuel_rate)          # 연료비조정액
+
                 tax1 = result * 0.1  # 부가가치세  # 사사오입
                 if (tax1 - self.get_precise(tax1)) >= 0.5:
                     tax1 = self.get_precise(tax1) + 1
