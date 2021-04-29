@@ -1,4 +1,4 @@
-from calc_Charge.CalcCharge import *
+from CalcCharge import *
 
 
 class CalcGeneral(CalcCharge):
@@ -19,6 +19,7 @@ class CalcGeneral(CalcCharge):
     def init_calc(self):
         charge: float = 0
         tmp_charge: float
+        env_contribution, fuel_rate = CalcCharge.get_conf(self)
 
         for i in range(12):
             summer: bool = 0  # 여름
@@ -34,6 +35,10 @@ class CalcGeneral(CalcCharge):
                 # 일반용은 사용량 0일 시 50% 감면
                 if (self.class1 == 0 and self.used_amount_list[i][0] == 0) or (self.used_amount_list == [0, 0, 0]):
                     result = self.get_precise(result / 2)
+
+                used_sum = self.used_amount_list[i][0] + self.used_amount_list[i][1] + self.used_amount_list[i][2]
+                result = self.get_precise(result + used_sum * env_contribution)   # 환경부담금
+                result = self.get_precise(result + used_sum * fuel_rate)          # 연료비조정액
 
                 tax1 = result * 0.1  # 부가가치세  # 사사오입
                 if (tax1 - self.get_precise(tax1)) >= 0.5:

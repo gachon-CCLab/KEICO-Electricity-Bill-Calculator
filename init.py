@@ -1,7 +1,7 @@
 import pymysql
-from calc_Charge.CalcHome import *
-from calc_Charge.CalcGeneral import *
-from calc_Charge.CalcIndustry import *
+from CalcHome import *
+from CalcGeneral import *
+from CalcIndustry import *
 import pandas as pd
 import datetime
 

@@ -1,7 +1,13 @@
-from calc_Charge.Parser.KEPCO_Parser import *
-from calc_Charge.CalcHome import *
-from calc_Charge.CalcGeneral import *
-from calc_Charge.CalcIndustry import *
+from Parser.KEPCO_Parser import *
+
+import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+from CalcHome import *
+from CalcGeneral import *
+from CalcIndustry import *
+
 import random
 
 # #####TEST-HOME###############################################################
@@ -67,7 +73,7 @@ import random
 # # result: int = a.init_calc()
 # # print(result)
 
-used_amount_list_home: list[int] = [0 for i in range(12)]
+used_amount_list_home: list = [0 for i in range(12)]
 used_amount_list_general = [[0 for i in range(3)] for j in range(12)]   # 2차원 배열 초기화
 used_amount_list_industry = [[0 for i in range(3)] for j in range(12)]  # 2차원 배열 초기화
 

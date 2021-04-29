@@ -1,3 +1,6 @@
+from CalcCharge import *
+
+
 class CalcIndustry:
     def __init__(self, used_amount_list_, contract_demand, class1, class2, class_contract):
         self.used_amount_list = used_amount_list_
@@ -15,6 +18,7 @@ class CalcIndustry:
 
     def init_calc(self):
         charge: float = 0
+        env_contribution, fuel_rate = CalcCharge.get_conf(self)
 
         for i in range(12):
             summer: bool = 0  # 여름
@@ -26,6 +30,11 @@ class CalcIndustry:
                     winter = 1
                 tmp_charge = self.calc(i, self.class1, self.class2, self.class_contract, summer, winter)
                 result = self.get_precise(tmp_charge)  # 전기요금계(기본요금 + 전력량요금)
+
+                used_sum = self.used_amount_list[i][0] + self.used_amount_list[i][1] + self.used_amount_list[i][2]
+                result = self.get_precise(result + used_sum * env_contribution)   # 환경부담금
+                result = self.get_precise(result + used_sum * fuel_rate)          # 연료비조정액
+
                 tax1 = result * 0.1  # 부가가치세  # 사사오입
                 if (tax1 - self.get_precise(tax1)) >= 0.5:
                     tax1 = self.get_precise(tax1) + 1

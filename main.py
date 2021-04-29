@@ -1,6 +1,6 @@
-from calc_Charge.CalcHome import *
-from calc_Charge.CalcGeneral import *
-from calc_Charge.CalcIndustry import *  # 일반용, 산업용 요금 유사.   # 일반용 을 == 산업용 을
+from CalcHome import *
+from CalcGeneral import *
+from CalcIndustry import *  # 일반용, 산업용 요금 유사.   # 일반용 을 == 산업용 을
 
 if __name__ == '__main__':
 
