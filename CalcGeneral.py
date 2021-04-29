@@ -1,4 +1,4 @@
-from calc_Charge.CalcCharge import *
+from CalcCharge import *
 
 
 class CalcGeneral(CalcCharge):
