@@ -26,6 +26,7 @@ class Parser:
 
     def init_calc(self):
         options = webdriver.ChromeOptions()
+        options.add_argument('headless')
         driver = webdriver.Chrome('chromedriver', chrome_options=options)
         driver.get("http://cyber.kepco.co.kr/ckepco/front/jsp/CY/J/A/CYJAPP000NFL.jsp#")
         wait = WebDriverWait(driver, 10)
