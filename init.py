@@ -266,6 +266,8 @@ def showUsage(db, user_info):   # user_info : dictionary
 # DELETE
 # 유저의 데이터 일괄 삭제
 
+
+
 if __name__ == '__main__':
     # DB - connect()
     _mysql_local = pymysql.connect(

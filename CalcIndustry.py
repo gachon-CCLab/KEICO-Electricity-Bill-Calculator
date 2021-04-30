@@ -31,8 +31,15 @@ class CalcIndustry:
                 tmp_charge = self.calc(i, self.class1, self.class2, self.class_contract, summer, winter)
                 result = self.get_precise(tmp_charge)  # 전기요금계(기본요금 + 전력량요금)
 
-                used_sum = self.used_amount_list[i][0] + self.used_amount_list[i][1] + self.used_amount_list[i][2]
+                # 총 사용량 구하기
+                if self.class1 != 0:  # 갑 I 이 아니면,
+                    used_sum = self.used_amount_list[i][0] + self.used_amount_list[i][1] + self.used_amount_list[i][2]
+                else:
+                    used_sum = self.used_amount_list[i][0]
+
+                print(result)
                 result = self.get_precise(result + used_sum * env_contribution)   # 환경부담금
+                print(result)
                 result = self.get_precise(result + used_sum * fuel_rate)          # 연료비조정액
 
                 tax1 = result * 0.1  # 부가가치세  # 사사오입
