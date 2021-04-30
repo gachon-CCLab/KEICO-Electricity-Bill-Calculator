@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0404a0c3-0261-4276-992c-567b59f4a03e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/KEICO-Electricity-Bill-Calculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/KEICO-Electricity-Bill-Calculator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CalcGeneral.py" beforeDir="false" afterPath="$PROJECT_DIR$/CalcGeneral.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalcHome.py" beforeDir="false" afterPath="$PROJECT_DIR$/CalcHome.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CalcIndustry.py" beforeDir="false" afterPath="$PROJECT_DIR$/CalcIndustry.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/KEPCO_Parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/KEPCO_Parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/init.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,26 +74,26 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="833" y="448" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1619693358766" />
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom" timestamp="1619767945669">
+    <state width="1877" height="183" key="GridCell.Tab.0.bottom" timestamp="1619774510525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="226" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1619706946155" />
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619767945669" />
-    <state width="1877" height="183" key="GridCell.Tab.0.center" timestamp="1619767945669">
+    <state width="1877" height="183" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619774510525" />
+    <state width="1877" height="183" key="GridCell.Tab.0.center" timestamp="1619774510525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="226" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1619706946155" />
-    <state width="1877" height="183" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619767945669" />
-    <state width="1877" height="183" key="GridCell.Tab.0.left" timestamp="1619767945669">
+    <state width="1877" height="183" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619774510525" />
+    <state width="1877" height="183" key="GridCell.Tab.0.left" timestamp="1619774510524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="226" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1619706946155" />
-    <state width="1877" height="183" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619767945669" />
-    <state width="1877" height="183" key="GridCell.Tab.0.right" timestamp="1619767945669">
+    <state width="1877" height="183" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619774510524" />
+    <state width="1877" height="183" key="GridCell.Tab.0.right" timestamp="1619774510525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="226" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1619706946155" />
-    <state width="1877" height="183" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619767945669" />
+    <state width="1877" height="183" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619774510525" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1619766867621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -128,7 +126,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Parser/KEPCO_Parser.py</url>
-          <line>433</line>
+          <line>428</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

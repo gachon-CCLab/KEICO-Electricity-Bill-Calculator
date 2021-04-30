@@ -37,7 +37,7 @@ class CalcGeneral(CalcCharge):
                     result = self.get_precise(result / 2)
 
                 # 총 사용량 구하기
-                if self.class2 != 0:        # 갑 I 이 아니면,
+                if self.class1 != 0:        # 갑 I 이 아니면,
                     used_sum = self.used_amount_list[i][0] + self.used_amount_list[i][1] + self.used_amount_list[i][2]
                 else:
                     used_sum = self.used_amount_list[i][0]
