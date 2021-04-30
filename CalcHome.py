@@ -62,7 +62,7 @@ class CalcHome(CalcCharge):
     def calc(self, i, voltage_factor, summer, winter):
         used_amount = self.used_amount_list[i]
         charge_: float = 0
-        if voltage_factor == 0:
+        if voltage_factor == 0:     # 저압
             if winter == 1:
                 if used_amount > 0 and used_amount <= 200:
                     charge_ = 910 + self.get_precise(used_amount * 93.3)
@@ -96,7 +96,7 @@ class CalcHome(CalcCharge):
                     charge_ = 7300 + 200 * 93.3 + 200 * 187.9 + self.get_precise((used_amount - 400) * 280.6)
                 else:
                     print("Wrong input")
-        elif voltage_factor == 1:
+        elif voltage_factor == 1:       # 고압
             if winter == 1:
                 if used_amount > 0 and used_amount <= 200:
                     charge_ = 730 + self.get_precise(used_amount * 78.3)

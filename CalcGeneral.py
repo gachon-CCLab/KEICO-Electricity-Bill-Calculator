@@ -36,7 +36,11 @@ class CalcGeneral(CalcCharge):
                 if (self.class1 == 0 and self.used_amount_list[i][0] == 0) or (self.used_amount_list == [0, 0, 0]):
                     result = self.get_precise(result / 2)
 
-                used_sum = self.used_amount_list[i][0] + self.used_amount_list[i][1] + self.used_amount_list[i][2]
+                # 총 사용량 구하기
+                if self.class2 != 0:        # 갑 I 이 아니면,
+                    used_sum = self.used_amount_list[i][0] + self.used_amount_list[i][1] + self.used_amount_list[i][2]
+                else:
+                    used_sum = self.used_amount_list[i][0]
                 result = self.get_precise(result + used_sum * env_contribution)   # 환경부담금
                 result = self.get_precise(result + used_sum * fuel_rate)          # 연료비조정액
 

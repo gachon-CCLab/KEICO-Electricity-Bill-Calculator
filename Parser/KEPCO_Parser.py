@@ -68,6 +68,8 @@ class Parser:
                             elem = wait.until(EC.visibility_of_element_located((By.ID, 'cal_result')))
                             result_ = elem.text
                             result_ = result_.replace('\n', '').replace('계산된 금액은', '').replace('원 입니다.', '').replace(',', '')
+                            if "    " in result_:   # 텍스트 잘 못 찾을 때의 예외처리
+                                continue
                             print('result : ' + result_)
                             charge += int(result_)
                             break
@@ -109,6 +111,8 @@ class Parser:
                             result_ = elem.text
                             result_ = result_.replace('\n', '').replace('계산된 금액은', '').replace('원 입니다.', '').replace(
                                 ',', '')
+                            if "    " in result_:   # 텍스트 잘 못 찾을 때의 예외처리
+                                continue
                             print('result : ' + result_)
                             charge += int(result_)
                             break
@@ -165,6 +169,8 @@ class Parser:
                             result_ = elem.text
                             result_ = result_.replace('\n', '').replace('계산된 금액은', '').replace('원 입니다.', '').replace(
                                 ',', '')
+                            if "    " in result_:   # 텍스트 잘 못 찾을 때의 예외처리
+                                continue
                             print('result : ' + result_)
                             charge += int(result_)
                             break
@@ -224,6 +230,8 @@ class Parser:
                             result_ = elem.text
                             result_ = result_.replace('\n', '').replace('계산된 금액은', '').replace('원 입니다.', '').replace(
                                 ',', '')
+                            if "    " in result_:   # 텍스트 잘 못 찾을 때의 예외처리
+                                continue
                             print('result : ' + result_)
                             charge += int(result_)
                             break
@@ -293,6 +301,8 @@ class Parser:
                             result_ = elem.text
                             result_ = result_.replace('\n', '').replace('계산된 금액은', '').replace('원 입니다.', '').replace(
                                 ',', '')
+                            if "    " in result_:   # 텍스트 잘 못 찾을 때의 예외처리
+                                continue
                             print('result : ' + result_)
                             charge += int(result_)
                             break
@@ -348,6 +358,8 @@ class Parser:
                             result_ = elem.text
                             result_ = result_.replace('\n', '').replace('계산된 금액은', '').replace('원 입니다.', '').replace(
                                 ',', '')
+                            if "    " in result_:   # 텍스트 잘 못 찾을 때의 예외처리
+                                continue
                             print('result : ' + result_)
                             charge += int(result_)
                             break
@@ -403,10 +415,13 @@ class Parser:
                     time.sleep(0.1)
                     while True:
                         try:
-                            elem = wait.until(EC.visibility_of_element_located((By.ID, 'cal_result')))
+                            elem = wait.until(EC.presence_of_element_located((By.ID, 'cal_result')))
+                            # elem = wait.until(EC.visibility_of_element_located((By.ID, 'cal_result')))
                             result_ = elem.text
                             result_ = result_.replace('\n', '').replace('계산된 금액은', '').replace('원 입니다.', '').replace(
                                 ',', '')
+                            if "    " in result_:   # 텍스트 잘 못 찾을 때의 예외처리
+                                continue
                             print('result : ' + result_)
                             charge += int(result_)
                             break
@@ -476,6 +491,8 @@ class Parser:
                             result_ = elem.text
                             result_ = result_.replace('\n', '').replace('계산된 금액은', '').replace('원 입니다.', '').replace(
                                 ',', '')
+                            if "    " in result_:   # 텍스트 잘 못 찾을 때의 예외처리
+                                continue
                             print('result : ' + result_)
                             charge += int(result_)
                             break
