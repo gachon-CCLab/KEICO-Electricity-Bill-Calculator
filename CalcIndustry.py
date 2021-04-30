@@ -37,9 +37,7 @@ class CalcIndustry:
                 else:
                     used_sum = self.used_amount_list[i][0]
 
-                print(result)
                 result = self.get_precise(result + used_sum * env_contribution)   # 환경부담금
-                print(result)
                 result = self.get_precise(result + used_sum * fuel_rate)          # 연료비조정액
 
                 tax1 = result * 0.1  # 부가가치세  # 사사오입
