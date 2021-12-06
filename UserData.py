@@ -20,13 +20,13 @@ class UserData:
 
     class_contract: int
 
-    def __post_init__(self):
-        self.used_amount_list = [0 for i in range(12)]
-        self.contract_demand = 0
-        self.charge = 0
-        self.voltage_factor = 0
-        self.class1 = 0
-        self.class2 = 0
-        self.class_contract = 0
+    # def __post_init__(self):
+    #     self.used_amount_list = [0 for i in range(12)]
+    #     self.contract_demand = 0
+    #     self.charge = 0
+    #     self.voltage_factor = 0
+    #     self.class1 = 0
+    #     self.class2 = 0
+    #     self.class_contract = 0
 
 

@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0404a0c3-0261-4276-992c-567b59f4a03e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalcGeneral.py" beforeDir="false" afterPath="$PROJECT_DIR$/CalcGeneral.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CalcHome.py" beforeDir="false" afterPath="$PROJECT_DIR$/CalcHome.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf.json" beforeDir="false" afterPath="$PROJECT_DIR$/conf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserData.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_month.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_month.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +37,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.main_month">
     <configuration name="StressTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="KEICO-Electricity-Bill-Calculator" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -81,6 +80,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main_month" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="KEICO-Electricity-Bill-Calculator" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_month.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="KEICO-Electricity-Bill-Calculator" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -104,6 +124,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main_month" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.StressTest" />
         <item itemvalue="Python.test1" />

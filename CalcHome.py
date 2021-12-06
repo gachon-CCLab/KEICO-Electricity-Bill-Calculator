@@ -60,6 +60,53 @@ class CalcHome(CalcCharge):
 
         return charge
 
+    def init_calc_month(self, i):
+        charge: int = 0
+        # summer: bool = 0  # 여름
+        # winter: bool = 0  # 겨울
+        # voltage_factor: bool = 0  # 0: 저압, 1: 고압
+        tmp_charge: float
+        env_contribution, fuel_rate = CalcCharge.get_conf(self)
+
+
+        summer: bool = 0  # 여름
+        winter: bool = 0  # 겨울
+        if self.used_amount_list[i] != 0:
+            if 6 <= i <= 7:
+                summer = 1
+            elif (0 <= i <= 1) or i == 11:
+                winter = 1
+            tmp_charge = self.calc(i, self.voltage_factor, summer, winter)
+            result = self.get_precise(tmp_charge)  # 전기요금계(기본요금 + 전력량요금)
+
+            used_sum = self.used_amount_list[i]
+            result = self.get_precise(result + used_sum * env_contribution)   # 환경부담금   # 일수로 계산
+            result = self.get_precise(result + used_sum * fuel_rate)          # 연료비조정액
+
+            if (self.used_amount_list[i] <= 200) and (result > 1000):     # 필수사용량 보장공제
+                if self.voltage_factor == 0:
+                    result = result - 4000
+                if self.voltage_factor == 1:
+                    result = result - 2500
+                if result < 1000:
+                    result = 1000
+
+            tax1 = result * 0.1  # 부가가치세  # 사사오입
+            if (tax1 - self.get_precise(tax1)) >= 0.5:
+                tax1 = self.get_precise(tax1) + 1
+            else:
+                tax1 = self.get_precise(tax1)
+            tax2 = self.get_precise((result * 0.037) - ((result * 0.037) % 10))  # 전련산업기반기금  # 10원미만 절사
+            tmp_charge = result + tax1 + tax2
+            tmp_charge = tmp_charge - (tmp_charge % 10)
+            print("전기 요금계 :", result)
+            print("부가가치세 :", tax1)
+            print("전력산업기반기금 :", tax2)
+            print("청구금액 :", tmp_charge, "\n")
+            charge += tmp_charge
+
+        return charge
+
     def calc(self, i, voltage_factor, summer, winter):
         used_amount = self.used_amount_list[i]
         charge_: float = 0
