@@ -52,6 +52,7 @@ class CalcGeneral(CalcCharge):
                 tax2 = self.get_precise((result * 0.037) - ((result * 0.037) % 10))  # 전련산업기반기금  # 10원미만 절사
                 tmp_charge = result + tax1 + tax2
                 tmp_charge = tmp_charge - (tmp_charge % 10)
+                print(str(i+1) + "월 요금")
                 print("전기 요금계 :", result)
                 print("부가가치세 :", tax1)
                 print("전력산업기반기금 :", tax2)

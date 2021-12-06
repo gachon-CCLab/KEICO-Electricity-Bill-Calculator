@@ -6,8 +6,6 @@ class CalcHome(CalcCharge):
         self.used_amount_list = used_amount_list_
         self.voltage_factor = voltage_factor
 
-
-
     @staticmethod
     def get_precise(num):  # int()의 역할(즉, 내림(절삭)) + 부동소수점 오류 fix
         if (num - int(num)) != 0.5:
@@ -35,7 +33,7 @@ class CalcHome(CalcCharge):
                 result = self.get_precise(tmp_charge)  # 전기요금계(기본요금 + 전력량요금)
 
                 used_sum = self.used_amount_list[i]
-                result = self.get_precise(result + used_sum * env_contribution)   # 환경부담금
+                result = self.get_precise(result + used_sum * env_contribution)   # 환경부담금   # 일수로 계산
                 result = self.get_precise(result + used_sum * fuel_rate)          # 연료비조정액
 
                 if (self.used_amount_list[i] <= 200) and (result > 1000):     # 필수사용량 보장공제
