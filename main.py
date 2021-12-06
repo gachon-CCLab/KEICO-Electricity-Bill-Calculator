@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from CalcHome import *
 from CalcGeneral import *
 from CalcIndustry import *  # 일반용, 산업용 요금 유사.   # 일반용 을 == 산업용 을
