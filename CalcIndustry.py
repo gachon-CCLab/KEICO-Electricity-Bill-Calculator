@@ -55,6 +55,45 @@ class CalcIndustry:
                 charge += tmp_charge
         return charge
 
+    def init_calc_month(self, i):
+        charge: float = 0
+        env_contribution, fuel_rate = CalcCharge.get_conf(self)
+
+        summer: bool = 0  # 여름
+        winter: bool = 0  # 겨울
+        if self.used_amount_list[i] != [0, 0, 0]:
+            if 5 <= i <= 7:
+                summer = 1
+            elif (0 <= i <= 1) or (10 <= i <= 11):
+                winter = 1
+            tmp_charge = self.calc(i, self.class1, self.class2, self.class_contract, summer, winter)
+            result = self.get_precise(tmp_charge)  # 전기요금계(기본요금 + 전력량요금)
+
+            # 총 사용량 구하기
+            if self.class1 != 0:  # 갑 I 이 아니면,
+                used_sum = self.used_amount_list[i][0] + self.used_amount_list[i][1] + self.used_amount_list[i][2]
+            else:
+                used_sum = self.used_amount_list[i][0]
+
+            result = self.get_precise(result + used_sum * env_contribution)   # 환경부담금
+            result = self.get_precise(result + used_sum * fuel_rate)          # 연료비조정액
+
+            tax1 = result * 0.1  # 부가가치세  # 사사오입
+            if (tax1 - self.get_precise(tax1)) >= 0.5:
+                tax1 = self.get_precise(tax1) + 1
+            else:
+                tax1 = self.get_precise(tax1)
+            tax2 = self.get_precise((result * 0.037) - ((result * 0.037) % 10))  # 전련산업기반기금  # 10원미만 절사
+            tmp_charge = result + tax1 + tax2
+            tmp_charge = tmp_charge - (tmp_charge % 10)
+            print("전기 요금계 :", result)
+            print("부가가치세 :", tax1)
+            print("전력산업기반기금 :", tax2)
+            print("청구금액 :", tmp_charge, "\n")
+            charge += tmp_charge
+        return charge
+
+
     # 갑I에만 '여름철', '겨울철' <==> 갑II, 을: '여름', '겨울' 구분 주의
     def calc(self, i, class1, class2, class_contract, summer, winter):
         used_amount = self.used_amount_list[i]
