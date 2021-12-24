@@ -1,0 +1,185 @@
+{
+    "electric_rates":[
+        {
+            "id": 0,
+            "name": "HOU_LOW",
+            "description": "주택용 전력(저압)",
+            "summer":{
+                "season_id": 0,
+                "description": "하계(7.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "description": "300kWh 이하 사용",
+                        "demand_charge": 910,
+                        "energy_charge": 88.3 
+                    },
+                    {
+                        "rate_id": 1,
+                        "description": "301~450kWh",
+                        "demand_charge": 1600,
+                        "energy_charge": 182.9 
+                    },
+                    {
+                        "rate_id": 2,
+                        "description": "450~1000kWh",
+                        "demand_charge": 7300,
+                        "energy_charge": 275.6
+                    },
+                    {
+                        "rate_id": 3,
+                        "description": "1000kWh 초과",
+                        "demand_charge": 7300,
+                        "energy_charge": 704.5
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~6.30, 9.1~11.30)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "description": "200kWh 이하 사용",
+                        "demand_charge": 910,
+                        "energy_charge": 88.3 
+                    },
+                    {
+                        "rate_id": 1,
+                        "description": "201~400kWh",
+                        "demand_charge": 1600,
+                        "energy_charge": 182.9 
+                    },
+                    {
+                        "rate_id": 2,
+                        "description": "400kWh 초과",
+                        "demand_charge": 7300,
+                        "energy_charge": 275.6
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "동계(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "description": "200kWh 이하 사용",
+                        "demand_charge": 910,
+                        "energy_charge": 88.3 
+                    },
+                    {
+                        "rate_id": 1,
+                        "description": "201~400kWh",
+                        "demand_charge": 1600,
+                        "energy_charge": 182.9 
+                    },
+                    {
+                        "rate_id": 2,
+                        "description": "400~1000kWh",
+                        "demand_charge": 7300,
+                        "energy_charge": 275.6
+                    },
+                    {
+                        "rate_id": 3,
+                        "description": "1000kWh 초과",
+                        "demand_charge": 7300,
+                        "energy_charge": 704.5
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 1,
+            "name": "HOU_HIGH",
+            "description": "주택용 전력(고압)",
+            "summer":{
+                "season_id": 0,
+                "description": "하계(7.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "description": "300kWh 이하 사용",
+                        "demand_charge": 730,
+                        "energy_charge": 73.3
+                    },
+                    {
+                        "rate_id": 1,
+                        "description": "301~450kWh",
+                        "demand_charge": 1260,
+                        "energy_charge": 142.3
+                    },
+                    {
+                        "rate_id": 2,
+                        "description": "450~1000kWh",
+                        "demand_charge": 6060,
+                        "energy_charge": 210.6
+                    },
+                    {
+                        "rate_id": 3,
+                        "description": "1000kWh 초과",
+                        "demand_charge": 6060,
+                        "energy_charge": 569.6
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~6.30, 9.1~11.30)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "description": "200kWh 이하 사용",
+                        "demand_charge": 730,
+                        "energy_charge": 73.3
+                    },
+                    {
+                        "rate_id": 1,
+                        "description": "201~400kWh",
+                        "demand_charge": 1260,
+                        "energy_charge": 142.3 
+                    },
+                    {
+                        "rate_id": 2,
+                        "description": "400kWh 초과",
+                        "demand_charge": 6060,
+                        "energy_charge": 210.6
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "동계(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "description": "200kWh 이하 사용",
+                        "demand_charge": 730,
+                        "energy_charge": 73.3 
+                    },
+                    {
+                        "rate_id": 1,
+                        "description": "201~400kWh",
+                        "demand_charge": 1260,
+                        "energy_charge": 142.3 
+                    },
+                    {
+                        "rate_id": 2,
+                        "description": "400~1000kWh",
+                        "demand_charge": 6060,
+                        "energy_charge": 210.6
+                    },
+                    {
+                        "rate_id": 3,
+                        "description": "1000kWh 초과",
+                        "demand_charge": 6060,
+                        "energy_charge": 569.6
+                    }
+                ]
+            }
+        },
+
+
+    ]
+}
