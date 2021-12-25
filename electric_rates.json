@@ -258,7 +258,7 @@
             },
             "winter": {
                 "season_id": 2,
-                "description": "동계(12.1 ~ 2.28)",
+                "description": "겨울철(12.1 ~ 2.28)",
                 "rates":[
                     {
                         "rate_id": 0,
@@ -303,7 +303,7 @@
             },
             "winter": {
                 "season_id": 2,
-                "description": "동계(12.1 ~ 2.28)",
+                "description": "겨울철(12.1 ~ 2.28)",
                 "rates":[
                     {
                         "rate_id": 0,
@@ -348,7 +348,7 @@
             },
             "winter": {
                 "season_id": 2,
-                "description": "동계(12.1 ~ 2.28)",
+                "description": "겨울철(12.1 ~ 2.28)",
                 "rates":[
                     {
                         "rate_id": 0,
@@ -360,6 +360,2630 @@
             }
         },
 
+        {
+            "id": 6,
+            "name": "GEN_A_I_HIGH_B_II",
+            "description": "일반용 전력(갑) I - 고압B 선택 II",
+            "class1": 0,
+            "class2": 2,
+            "class_contract": 1,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "description": "주택용과 계절 기준 다름",
+                        "demand_charge": 8230,
+                        "energy_charge": 103.5
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "description": "",
+                        "demand_charge": 8230,
+                        "energy_charge": 60.5
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "description": "",
+                        "demand_charge": 8230,
+                        "energy_charge": 90.3
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 7,
+            "name": "GEN_A_II_HIGH_A_I",
+            "description": "일반용 전력(갑) II - 고압A 선택 I",
+            "class1": 1,
+            "class2": 0,
+            "class_contract": 0,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7170,
+                        "energy_charge": 57.7
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7170,
+                        "energy_charge": 108.9
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7170,
+                        "energy_charge": 131.4
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7170,
+                        "energy_charge": 57.7
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7170,
+                        "energy_charge": 65.1
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7170,
+                        "energy_charge": 76.4
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7170,
+                        "energy_charge": 66.4
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7170,
+                        "energy_charge": 96.8
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7170,
+                        "energy_charge": 111.6
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 8,
+            "name": "GEN_A_II_HIGH_A_II",
+            "description": "일반용 전력(갑) II - 고압A 선택 II",
+            "class1": 1,
+            "class2": 0,
+            "class_contract": 1,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8230,
+                        "energy_charge": 52.4
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8230,
+                        "energy_charge": 103.6
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8230,
+                        "energy_charge": 126.1
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8230,
+                        "energy_charge": 52.4
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8230,
+                        "energy_charge": 59.8
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8230,
+                        "energy_charge": 71.1
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8230,
+                        "energy_charge": 61.1
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8230,
+                        "energy_charge": 91.5
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8230,
+                        "energy_charge": 106.3
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 9,
+            "name": "GEN_A_II_HIGH_B_I",
+            "description": "일반용 전력(갑) II - 고압B 선택 I",
+            "class1": 1,
+            "class2": 1,
+            "class_contract": 0,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7170,
+                        "energy_charge": 57.1
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7170,
+                        "energy_charge": 105.7
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7170,
+                        "energy_charge": 122.1
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7170,
+                        "energy_charge": 57.1
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7170,
+                        "energy_charge": 63.0
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7170,
+                        "energy_charge": 68.4
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7170,
+                        "energy_charge": 66.1
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7170,
+                        "energy_charge": 93.4
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7170,
+                        "energy_charge": 107.6
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 10,
+            "name": "GEN_A_II_HIGH_B_II",
+            "description": "일반용 전력(갑) II - 고압B 선택 II",
+            "class1": 1,
+            "class2": 1,
+            "class_contract": 1,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8230,
+                        "energy_charge": 51.8
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8230,
+                        "energy_charge": 100.4
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8230,
+                        "energy_charge": 116.8
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8230,
+                        "energy_charge": 51.8
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8230,
+                        "energy_charge": 57.7
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8230,
+                        "energy_charge": 63.1
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8230,
+                        "energy_charge": 60.8
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8230,
+                        "energy_charge": 88.1
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8230,
+                        "energy_charge": 102.3
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 11,
+            "name": "GEN_B_HIGH_A_I",
+            "description": "일반용 전력(을) - 고압A 선택 I",
+            "class1": 2,
+            "class2": 0,
+            "class_contract": 0,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7220,
+                        "energy_charge": 56.6
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7220,
+                        "energy_charge": 109.5
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7220,
+                        "energy_charge": 191.6
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7220,
+                        "energy_charge": 56.6
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7220,
+                        "energy_charge": 79.1
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7220,
+                        "energy_charge": 109.8
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7220,
+                        "energy_charge": 63.6
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7220,
+                        "energy_charge": 109.7
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7220,
+                        "energy_charge": 167.2
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 12,
+            "name": "GEN_B_HIGH_A_II",
+            "description": "일반용 전력(을) - 고압A 선택 II",
+            "class1": 2,
+            "class2": 0,
+            "class_contract": 1,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8320,
+                        "energy_charge": 51.1
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8320,
+                        "energy_charge": 104.0
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8320,
+                        "energy_charge": 186.1
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8320,
+                        "energy_charge": 51.1
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8320,
+                        "energy_charge": 73.6
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8320,
+                        "energy_charge": 104.3
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8320,
+                        "energy_charge": 58.1
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8320,
+                        "energy_charge": 104.2
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8320,
+                        "energy_charge": 161.7
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 13,
+            "name": "GEN_B_HIGH_A_III",
+            "description": "일반용 전력(을) - 고압A 선택 III",
+            "class1": 2,
+            "class2": 0,
+            "class_contract": 2,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 9810,
+                        "energy_charge": 50.2
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 9810,
+                        "energy_charge": 103.4
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 9810,
+                        "energy_charge": 173.7
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 9810,
+                        "energy_charge": 50.2
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 9810,
+                        "energy_charge": 72.3
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 9810,
+                        "energy_charge": 96.0
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 9810,
+                        "energy_charge": 57.5
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 9810,
+                        "energy_charge": 103.6
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 9810,
+                        "energy_charge": 150.5
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 14,
+            "name": "GEN_B_HIGH_B_I",
+            "description": "일반용 전력(을) - 고압B 선택 I",
+            "class1": 2,
+            "class2": 1,
+            "class_contract": 0,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6630,
+                        "energy_charge": 55.0
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6630,
+                        "energy_charge": 107.3
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6630,
+                        "energy_charge": 188.5
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6630,
+                        "energy_charge": 55.0
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6630,
+                        "energy_charge": 77.3
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6630,
+                        "energy_charge": 107.6
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6630,
+                        "energy_charge": 62.0
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6630,
+                        "energy_charge": 107.3
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6630,
+                        "energy_charge": 163.5
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 15,
+            "name": "GEN_B_HIGH_B_II",
+            "description": "일반용 전력(을) - 고압B 선택 II",
+            "class1": 2,
+            "class2": 1,
+            "class_contract": 1,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7380,
+                        "energy_charge": 51.2
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7380,
+                        "energy_charge": 103.5
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7380,
+                        "energy_charge": 184.7
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7380,
+                        "energy_charge": 51.2
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7380,
+                        "energy_charge": 73.5
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7380,
+                        "energy_charge": 103.8
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7380,
+                        "energy_charge": 58.2
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7380,
+                        "energy_charge": 103.5
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7380,
+                        "energy_charge": 159.7
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 16,
+            "name": "GEN_B_HIGH_B_III",
+            "description": "일반용 전력(을) - 고압B 선택 III",
+            "class1": 2,
+            "class2": 1,
+            "class_contract": 2,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8190,
+                        "energy_charge": 49.5
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8190,
+                        "energy_charge": 101.8
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8190,
+                        "energy_charge": 183.1
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8190,
+                        "energy_charge": 49.5
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8190,
+                        "energy_charge": 71.9
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8190,
+                        "energy_charge": 102.2
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8190,
+                        "energy_charge": 56.6
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8190,
+                        "energy_charge": 101.8
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8190,
+                        "energy_charge": 158.0
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 17,
+            "name": "GEN_B_HIGH_C_I",
+            "description": "일반용 전력(을) - 고압C 선택 I",
+            "class1": 2,
+            "class2": 2,
+            "class_contract": 0,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6590,
+                        "energy_charge": 54.5
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6590,
+                        "energy_charge": 107.4
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6590,
+                        "energy_charge": 188.3
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6590,
+                        "energy_charge": 54.5
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6590,
+                        "energy_charge": 77.4
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6590,
+                        "energy_charge": 107.8
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6590,
+                        "energy_charge": 61.4
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6590,
+                        "energy_charge": 107.0
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6590,
+                        "energy_charge": 163.6
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 18,
+            "name": "GEN_B_HIGH_C_II",
+            "description": "일반용 전력(을) - 고압C 선택 II",
+            "class1": 2,
+            "class2": 2,
+            "class_contract": 1,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7520,
+                        "energy_charge": 49.8
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7520,
+                        "energy_charge": 102.7
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7520,
+                        "energy_charge": 183.6
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7520,
+                        "energy_charge": 49.8
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7520,
+                        "energy_charge": 72.7
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7520,
+                        "energy_charge": 103.1
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7520,
+                        "energy_charge": 56.7
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7520,
+                        "energy_charge": 102.3
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7520,
+                        "energy_charge": 158.9
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 19,
+            "name": "GEN_B_HIGH_C_III",
+            "description": "일반용 전력(을) - 고압C 선택 III",
+            "class1": 2,
+            "class2": 2,
+            "class_contract": 2,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8090,
+                        "energy_charge": 48.7
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8090,
+                        "energy_charge": 101.6
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8090,
+                        "energy_charge": 182.5
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8090,
+                        "energy_charge": 48.7
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8090,
+                        "energy_charge": 71.6
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8090,
+                        "energy_charge": 102.0
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8090,
+                        "energy_charge": 55.6
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8090,
+                        "energy_charge": 101.2
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8090,
+                        "energy_charge": 157.8
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 20,
+            "name": "IND_A_I_LOW",
+            "description": "산업용(갑) I - 저압",
+            "class1": 0,
+            "class2": 0,
+            "class_contract": 0,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "",
+                        "description": "",
+                        "demand_charge": 5550,
+                        "energy_charge": 76.0
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "",
+                        "description": "",
+                        "demand_charge": 5550,
+                        "energy_charge": 54.2
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "",
+                        "description": "",
+                        "demand_charge": 5550,
+                        "energy_charge": 74.3
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 21,
+            "name": "IND_A_I_HIGH_A_I",
+            "description": "산업용(갑) I - 고압A 선택 I",
+            "class1": 0,
+            "class2": 1,
+            "class_contract": 0,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "",
+                        "description": "",
+                        "demand_charge": 6490,
+                        "energy_charge": 84.6
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "",
+                        "description": "",
+                        "demand_charge": 6490,
+                        "energy_charge": 60.9
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "",
+                        "description": "",
+                        "demand_charge": 6490,
+                        "energy_charge": 84.5
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 22,
+            "name": "IND_A_I_HIGH_A_II",
+            "description": "산업용(갑) I - 고압A 선택 II",
+            "class1": 0,
+            "class2": 1,
+            "class_contract": 1,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "",
+                        "description": "",
+                        "demand_charge": 7470,
+                        "energy_charge": 79.8
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "",
+                        "description": "",
+                        "demand_charge": 7470,
+                        "energy_charge": 56.3
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "",
+                        "description": "",
+                        "demand_charge": 7470,
+                        "energy_charge": 78.0
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 23,
+            "name": "IND_A_I_HIGH_B_I",
+            "description": "산업용(갑) I - 고압B 선택 I",
+            "class1": 0,
+            "class2": 2,
+            "class_contract": 0,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "",
+                        "description": "",
+                        "demand_charge": 6000,
+                        "energy_charge": 83.4
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "",
+                        "description": "",
+                        "demand_charge": 6000,
+                        "energy_charge": 59.8
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "",
+                        "description": "",
+                        "demand_charge": 6000,
+                        "energy_charge": 83.0
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 24,
+            "name": "IND_A_I_HIGH_B_II",
+            "description": "산업용(갑) I - 고압B 선택 II",
+            "class1": 0,
+            "class2": 2,
+            "class_contract": 1,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "",
+                        "description": "",
+                        "demand_charge": 6900,
+                        "energy_charge": 78.7
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "",
+                        "description": "",
+                        "demand_charge": 6900,
+                        "energy_charge": 55.2
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "",
+                        "description": "",
+                        "demand_charge": 6900,
+                        "energy_charge": 76.9
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 25,
+            "name": "IND_A_II_HIGH_A_I",
+            "description": "산업용(갑) II - 고압A 선택 I",
+            "class1": 1,
+            "class2": 0,
+            "class_contract": 0,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6490,
+                        "energy_charge": 55.5
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6490,
+                        "energy_charge": 81.3
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6490,
+                        "energy_charge": 114.8
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6490,
+                        "energy_charge": 55.5
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6490,
+                        "energy_charge": 60.3
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6490,
+                        "energy_charge": 79.5
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6490,
+                        "energy_charge": 62.9
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6490,
+                        "energy_charge": 79.8
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6490,
+                        "energy_charge": 109.2
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 26,
+            "name": "IND_A_II_HIGH_A_II",
+            "description": "산업용(갑) II - 고압A 선택 II",
+            "class1": 1,
+            "class2": 0,
+            "class_contract": 1,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7470,
+                        "energy_charge": 50.6
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7470,
+                        "energy_charge": 76.4
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7470,
+                        "energy_charge": 109.9
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7470,
+                        "energy_charge": 50.6
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7470,
+                        "energy_charge": 55.4
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7470,
+                        "energy_charge": 74.6
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7470,
+                        "energy_charge": 58.0
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7470,
+                        "energy_charge": 74.9
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7470,
+                        "energy_charge": 104.3
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 27,
+            "name": "IND_A_II_HIGH_B_I",
+            "description": "산업용(갑) II - 고압B 선택 I",
+            "class1": 1,
+            "class2": 1,
+            "class_contract": 0,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6000,
+                        "energy_charge": 52.3
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6000,
+                        "energy_charge": 79.9
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6000,
+                        "energy_charge": 113.7
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6000,
+                        "energy_charge": 52.3
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6000,
+                        "energy_charge": 58.9
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6000,
+                        "energy_charge": 77.7
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6000,
+                        "energy_charge": 59.5
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6000,
+                        "energy_charge": 77.5
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6000,
+                        "energy_charge": 106.2
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 28,
+            "name": "IND_A_II_HIGH_B_II",
+            "description": "산업용(갑) II - 고압B 선택 II",
+            "class1": 1,
+            "class2": 1,
+            "class_contract": 1,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6900,
+                        "energy_charge": 47.8
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6900,
+                        "energy_charge": 75.4
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6900,
+                        "energy_charge": 109.2
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6900,
+                        "energy_charge": 47.8
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6900,
+                        "energy_charge": 54.4
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6900,
+                        "energy_charge": 73.2
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6900,
+                        "energy_charge": 55.0
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6900,
+                        "energy_charge": 73.0
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6900,
+                        "energy_charge": 101.7
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 29,
+            "name": "IND_B_HIGH_A_I",
+            "description": "산업용 전력(을) - 고압A 선택 I",
+            "class1": 2,
+            "class2": 0,
+            "class_contract": 0,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7220,
+                        "energy_charge": 56.6
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7220,
+                        "energy_charge": 109.5
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7220,
+                        "energy_charge": 191.6
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7220,
+                        "energy_charge": 56.6
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7220,
+                        "energy_charge": 79.1
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7220,
+                        "energy_charge": 109.8
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7220,
+                        "energy_charge": 63.6
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7220,
+                        "energy_charge": 109.7
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7220,
+                        "energy_charge": 167.2
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 30,
+            "name": "IND_B_HIGH_A_II",
+            "description": "산업용 전력(을) - 고압A 선택 II",
+            "class1": 2,
+            "class2": 0,
+            "class_contract": 1,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8320,
+                        "energy_charge": 51.1
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8320,
+                        "energy_charge": 104.0
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8320,
+                        "energy_charge": 186.1
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8320,
+                        "energy_charge": 51.1
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8320,
+                        "energy_charge": 73.6
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8320,
+                        "energy_charge": 104.3
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8320,
+                        "energy_charge": 58.1
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8320,
+                        "energy_charge": 104.2
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8320,
+                        "energy_charge": 161.7
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 31,
+            "name": "IND_B_HIGH_A_III",
+            "description": "산업용 전력(을) - 고압A 선택 III",
+            "class1": 2,
+            "class2": 0,
+            "class_contract": 2,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 9810,
+                        "energy_charge": 50.2
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 9810,
+                        "energy_charge": 103.4
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 9810,
+                        "energy_charge": 173.7
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 9810,
+                        "energy_charge": 50.2
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 9810,
+                        "energy_charge": 72.3
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 9810,
+                        "energy_charge": 96.0
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 9810,
+                        "energy_charge": 57.5
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 9810,
+                        "energy_charge": 103.6
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 9810,
+                        "energy_charge": 150.5
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 32,
+            "name": "IND_B_HIGH_B_I",
+            "description": "산업용 전력(을) - 고압B 선택 I",
+            "class1": 2,
+            "class2": 1,
+            "class_contract": 0,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6630,
+                        "energy_charge": 55.0
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6630,
+                        "energy_charge": 107.3
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6630,
+                        "energy_charge": 188.5
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6630,
+                        "energy_charge": 55.0
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6630,
+                        "energy_charge": 77.3
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6630,
+                        "energy_charge": 107.6
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6630,
+                        "energy_charge": 62.0
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6630,
+                        "energy_charge": 107.3
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6630,
+                        "energy_charge": 163.5
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 33,
+            "name": "IND_B_HIGH_B_II",
+            "description": "산업용 전력(을) - 고압B 선택 II",
+            "class1": 2,
+            "class2": 1,
+            "class_contract": 1,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7380,
+                        "energy_charge": 51.2
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7380,
+                        "energy_charge": 103.5
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7380,
+                        "energy_charge": 184.7
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7380,
+                        "energy_charge": 51.2
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7380,
+                        "energy_charge": 73.5
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7380,
+                        "energy_charge": 103.8
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7380,
+                        "energy_charge": 58.2
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7380,
+                        "energy_charge": 103.5
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7380,
+                        "energy_charge": 159.7
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 34,
+            "name": "IND_B_HIGH_B_III",
+            "description": "산업용 전력(을) - 고압B 선택 III",
+            "class1": 2,
+            "class2": 1,
+            "class_contract": 2,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8190,
+                        "energy_charge": 49.5
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8190,
+                        "energy_charge": 101.8
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8190,
+                        "energy_charge": 183.1
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8190,
+                        "energy_charge": 49.5
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8190,
+                        "energy_charge": 71.9
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8190,
+                        "energy_charge": 102.2
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8190,
+                        "energy_charge": 56.6
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8190,
+                        "energy_charge": 101.8
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8190,
+                        "energy_charge": 158.0
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 35,
+            "name": "IND_B_HIGH_C_I",
+            "description": "산업용 전력(을) - 고압C 선택 I",
+            "class1": 2,
+            "class2": 2,
+            "class_contract": 0,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6590,
+                        "energy_charge": 54.5
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6590,
+                        "energy_charge": 107.4
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6590,
+                        "energy_charge": 188.3
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6590,
+                        "energy_charge": 54.5
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6590,
+                        "energy_charge": 77.4
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6590,
+                        "energy_charge": 107.8
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 6590,
+                        "energy_charge": 61.4
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 6590,
+                        "energy_charge": 107.0
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 6590,
+                        "energy_charge": 163.6
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 36,
+            "name": "IND_B_HIGH_C_II",
+            "description": "산업용 전력(을) - 고압C 선택 II",
+            "class1": 2,
+            "class2": 2,
+            "class_contract": 1,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7520,
+                        "energy_charge": 49.8
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7520,
+                        "energy_charge": 102.7
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7520,
+                        "energy_charge": 183.6
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7520,
+                        "energy_charge": 49.8
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7520,
+                        "energy_charge": 72.7
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7520,
+                        "energy_charge": 103.1
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 7520,
+                        "energy_charge": 56.7
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 7520,
+                        "energy_charge": 102.3
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 7520,
+                        "energy_charge": 158.9
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 37,
+            "name": "IND_B_HIGH_C_III",
+            "description": "산업용 전력(을) - 고압C 선택 III",
+            "class1": 2,
+            "class2": 2,
+            "class_contract": 2,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8090,
+                        "energy_charge": 48.7
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8090,
+                        "energy_charge": 101.6
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8090,
+                        "energy_charge": 182.5
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8090,
+                        "energy_charge": 48.7
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8090,
+                        "energy_charge": 71.6
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8090,
+                        "energy_charge": 102.0
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "겨울철(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "rate_name": "off-peak",
+                        "description": "경부하",
+                        "demand_charge": 8090,
+                        "energy_charge": 55.6
+                    },
+                    {
+                        "rate_id": 1,
+                        "rate_name": "mid-peak",
+                        "description": "중간부하",
+                        "demand_charge": 8090,
+                        "energy_charge": 101.2
+                    },
+                    {
+                        "rate_id": 2,
+                        "rate_name": "on-peak",
+                        "description": "최대부하",
+                        "demand_charge": 8090,
+                        "energy_charge": 157.8
+                    }
+                ]
+            }
+        },
 
     ]
 }
