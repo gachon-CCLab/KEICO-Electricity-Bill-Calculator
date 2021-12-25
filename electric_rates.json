@@ -230,7 +230,7 @@
             "name": "GEN_A_I_HIGH_A_I",
             "description": "일반용 전력(갑) I - 고압A 선택 I",
             "class1": 0,
-            "class2": 0,
+            "class2": 1,
             "class_contract": 0,
             "summer":{
                 "season_id": 0,
@@ -239,8 +239,8 @@
                     {
                         "rate_id": 0,
                         "description": "주택용과 계절 기준 다름",
-                        "demand_charge": 6160,
-                        "energy_charge": 100.7
+                        "demand_charge": 7170,
+                        "energy_charge": 110.9
                     }
                 ]
             },
@@ -251,8 +251,8 @@
                     {
                         "rate_id": 0,
                         "description": "",
-                        "demand_charge": 6160,
-                        "energy_charge": 60.2
+                        "demand_charge": 7170,
+                        "energy_charge": 66.9
                     }
                 ]
             },
@@ -263,13 +263,103 @@
                     {
                         "rate_id": 0,
                         "description": "",
-                        "demand_charge": 6160,
-                        "energy_charge": 87.3
+                        "demand_charge": 7170,
+                        "energy_charge": 98.6
                     }
                 ]
             }
         },
-        
+
+        {
+            "id": 4,
+            "name": "GEN_A_I_HIGH_A_II",
+            "description": "일반용 전력(갑) I - 고압A 선택 II",
+            "class1": 0,
+            "class2": 1,
+            "class_contract": 1,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "description": "주택용과 계절 기준 다름",
+                        "demand_charge": 8230,
+                        "energy_charge": 106.9
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "description": "",
+                        "demand_charge": 8230,
+                        "energy_charge": 62.6
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "동계(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "description": "",
+                        "demand_charge": 8230,
+                        "energy_charge": 93.3
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": 5,
+            "name": "GEN_A_I_HIGH_B_I",
+            "description": "일반용 전력(갑) I - 고압B 선택 I",
+            "class1": 0,
+            "class2": 2,
+            "class_contract": 0,
+            "summer":{
+                "season_id": 0,
+                "description": "여름철(6.1 ~ 8.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "description": "주택용과 계절 기준 다름",
+                        "demand_charge": 7170,
+                        "energy_charge": 108.8
+                    }
+                ]
+            },
+            "spring_fall":{
+                "season_id": 1,
+                "description": "봄가을철(3.1~5.31, 9.1~10.31)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "description": "",
+                        "demand_charge": 7170,
+                        "energy_charge": 65.8
+                    }
+                ]
+            },
+            "winter": {
+                "season_id": 2,
+                "description": "동계(12.1 ~ 2.28)",
+                "rates":[
+                    {
+                        "rate_id": 0,
+                        "description": "",
+                        "demand_charge": 7170,
+                        "energy_charge": 95.6
+                    }
+                ]
+            }
+        },
+
 
     ]
 }
