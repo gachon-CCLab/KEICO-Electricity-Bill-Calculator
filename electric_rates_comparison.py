@@ -16,9 +16,20 @@ comparison_set2 = (20, 21, 110, 111)
 comparison_set3 = (200, 201, 202)
 comparison_set4 = (210, 211, 212)
 comparison_set5 = (220, 221, 222)
+comparison_sets = (comparison_set1, comparison_set2, comparison_set3,
+                comparison_set4, comparison_set5)
 
-user_data.class1 = 
-user_data.class2 = 
+selector = month_calc.class1 * 100 + month_calc.class2 * 10 + month_calc.class_contract 
+
+for i in range(1, 6):
+    for num in comparison_sets[i]:
+        if selector == num:
+            target_set_idx = i
+
+for comparable_selector in comparison_sets[target_set_idx]:
+    user_data.class1 = comparable_selector // 100
+    user_data.class2 = (comparable_selector % 100) // 10
+    user_data.class_contract = (comparable_selector % 10)
 
 
 
