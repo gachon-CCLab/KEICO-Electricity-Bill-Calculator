@@ -10,6 +10,8 @@ class UserData:
     charge: float
     voltage_factor: int     # 0: 저압, 1: 고압 (in home Calc)
 
+    calc_type: int      # 0: 주택용, 1: 일반용, 2: 산업용
+
     # 0: 갑I, 1: 갑II, 2: 을
     class1: int
 
