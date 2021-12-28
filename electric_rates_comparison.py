@@ -57,6 +57,11 @@ if target_set_idx is not None:      # 비교군이 존재하는 요금일 경우
         user_data.class_contract = (comparable_selector % 10)
 
         # 요금 데이터로부터 계산할 요금의 세부정보 얻기
+        target_gen_obj = (item for item in rates_data['electric_rates'] if item['calc_type'] == calc_type and item['class1']
+                    == user_data.class1 and item['class2'] == user_data.class2 and item['class_contract'] == user_data.class_contract)
+        for value in target_gen_obj:
+            target_rates_dict = value
+        rates_title = target_rates_dict['description']
 
         # 1년(12개월)에 해당하는 계산 
         for i in range(1, 13):
