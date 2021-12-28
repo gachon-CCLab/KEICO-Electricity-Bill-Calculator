@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 @dataclass
 class UserData:
     # used_amount_list: list[int] = field(default_factory=list)
-    used_amount_list: list[int]     # 계약 전력(kWh)  # 4kWh 이상?
+    used_amount_list: list[int]# 계약 전력(kWh)  # 4kWh 이상?
     contract_demand: int
     charge: float
     voltage_factor: int     # 0: 저압, 1: 고압 (in home Calc)

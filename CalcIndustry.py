@@ -93,7 +93,6 @@ class CalcIndustry:
             charge += tmp_charge
         return charge
 
-
     # 갑I에만 '여름철', '겨울철' <==> 갑II, 을: '여름', '겨울' 구분 주의
     def calc(self, i, class1, class2, class_contract, summer, winter):
         used_amount = self.used_amount_list[i]
