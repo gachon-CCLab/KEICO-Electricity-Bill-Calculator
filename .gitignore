@@ -155,3 +155,4 @@ Thumbs.db
 
 # customized
 __pycache__
+.idea/workspace.xml
