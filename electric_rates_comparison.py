@@ -1,11 +1,32 @@
+# -*- coding: utf-8 -*-
 import requests
-import json
+import pandas as pd
 from MonthCalc import *
 
 # POST (JSON)
 headers = {'Content-Type': 'application/json; charset=utf-8'}
 
 month_calc = MonthCalc()
+
+
+def get_data_list():
+    data_df = pd.read_csv('future_5min_total.csv', index_col='date', parse_dates=True, delimiter=',')
+    months = [g for n, g in data_df.groupby(pd.Grouper(freq='M'))]
+    print(months)
+
+    print(len(months))
+    print(months[0])
+
+    for month in months:
+        target_month = month[pd.DatetimeIndex(df.index).month]
+        off_peak = month[(pd.DatetimeIndex(df.index).hour < 9) | (pd.DatetimeIndex(df.index).hour >= 23)]
+        if 2 <= target_month < 11:
+            mid_peak = month[(pd.DatetimeIndex(df.index).hour < 9) | (pd.DatetimeIndex(df.index).hour >= 23)]
+
+
+get_data_list()
+
+
 user_data = month_calc.user_data
 result_index = 1
 calc_type = month_calc.user_data.calc_type
