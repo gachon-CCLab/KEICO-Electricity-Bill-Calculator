@@ -7,6 +7,9 @@ from MonthCalc import *
 headers = {'Content-Type': 'application/json; charset=utf-8'}
 
 month_calc = MonthCalc()
+user_data = month_calc.user_data
+result_index = 1
+calc_type = month_calc.user_data.calc_type
 
 
 def get_data_list():
@@ -18,18 +21,30 @@ def get_data_list():
     print(months[0])
 
     for month in months:
-        target_month = month[pd.DatetimeIndex(df.index).month]
-        off_peak = month[(pd.DatetimeIndex(df.index).hour < 9) | (pd.DatetimeIndex(df.index).hour >= 23)]
-        if 2 <= target_month < 11:
-            mid_peak = month[(pd.DatetimeIndex(df.index).hour < 9) | (pd.DatetimeIndex(df.index).hour >= 23)]
+        target_month = month[pd.DatetimeIndex(month.index).month]
+        if calc_type == 0:      # 주택용
+            # 단순 합산 후 데이터 input
+            month['total1'].resample('1M').sum()
+        else:       # 일반용, 산업용
+            off_peak = month[(pd.DatetimeIndex(month.index).hour < 9) | (pd.DatetimeIndex(month.index).hour >= 23)]
+            if 2 <= target_month < 11:
+                mid_peak = month[(pd.DatetimeIndex(month.index).hour >= 9) | (pd.DatetimeIndex(month.index).hour < 10)  |
+                                 (pd.DatetimeIndex(month.index).hour >= 12) | (pd.DatetimeIndex(month.index).hour < 13) |
+                                 (pd.DatetimeIndex(month.index).hour >= 17) | (pd.DatetimeIndex(month.index).hour < 23)]
+                on_peak = month[(pd.DatetimeIndex(month.index).hour >= 10) | (pd.DatetimeIndex(month.index).hour < 12) |
+                                (pd.DatetimeIndex(month.index).hour >= 13) | (pd.DatetimeIndex(month.index).hour < 17) ]
+            else:
+                mid_peak = month[(pd.DatetimeIndex(month.index).hour >= 9) | (pd.DatetimeIndex(month.index).hour < 10)  |
+                                 (pd.DatetimeIndex(month.index).hour >= 12) | (pd.DatetimeIndex(month.index).hour < 13) |
+                                 (pd.DatetimeIndex(month.index).hour >= 17) | (pd.DatetimeIndex(month.index).hour < 23)]
+                on_peak = month[(pd.DatetimeIndex(month.index).hour >= 10) | (pd.DatetimeIndex(month.index).hour < 12) |
+                                (pd.DatetimeIndex(month.index).hour >= 13) | (pd.DatetimeIndex(month.index).hour < 17) ]
 
 
 get_data_list()
 
 
-user_data = month_calc.user_data
-result_index = 1
-calc_type = month_calc.user_data.calc_type
+
 
 # 비교 세트, 일반용과 산업용에 적용 가능
 # a number = class1 * 100 + class2 * 10 + class3 * 1
