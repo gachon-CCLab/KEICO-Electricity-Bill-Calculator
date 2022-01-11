@@ -2,6 +2,9 @@
 import requests
 import pandas as pd
 from datetime import datetime
+
+from typing import List
+
 from MonthCalc import *
 
 # POST (JSON)
@@ -15,7 +18,8 @@ calc_type = month_calc.user_data.calc_type
 dt_parser = lambda x: datetime.strptime(x[:-6], "%Y-%m-%d %H:%M:%S")
 
 
-def get_data_list():
+def get_data_list() -> list:
+    used_amount_list: List[List[float]] = [[0.0 for i in range(3)] for j in range(12)]
     data_df = pd.read_csv('future_5min_total.csv',
                           index_col=['date'],
                           parse_dates=['date'],
@@ -28,34 +32,42 @@ def get_data_list():
     print(len(months_df))
     print(months_df[0])
 
+    # calc_type = 0
+
     for month_df in months_df:
         print(type(month_df))
         target_month = month_df.index.month[0]
         if calc_type == 0:  # 주택용
             # 단순 합산 후 데이터 input
-            month_df['total1'].resample('1M').sum()
+            sum_df = month_df['total1'].resample('1M').sum()
+            used_amount_list[target_month + 1][0] = sum_df[0]
         else:  # 일반용, 산업용
-            off_peak = month_df[
-                (month_df.index.hour < 9) | (month_df.index.hour >= 23)]
+            off_peak_df = month_df[(month_df.index.hour < 9) | (month_df.index.hour >= 23)]
+            # 계시별 요금제 처리
             if 2 <= target_month < 11:
-                mid_peak = month_df[
+                mid_peak_df = month_df[
                     (month_df.index.hour >= 9) | (month_df.index.hour < 10) |
                     (month_df.index.hour >= 12) | (month_df.index.hour < 13) |
                     (month_df.index.hour >= 17) | (month_df.index.hour < 23)]
-                on_peak = month_df[
+                on_peak_df = month_df[
                     (month_df.index.hour >= 10) | (month_df.index.hour < 12) |
                     (month_df.index.hour >= 13) | (month_df.index.hour < 17)]
             else:
-                mid_peak = month_df[
+                mid_peak_df = month_df[
                     (month_df.index.hour >= 9) | (month_df.index.hour < 10) |
                     (month_df.index.hour >= 12) | (month_df.index.hour < 13) |
                     (month_df.index.hour >= 17) | (month_df.index.hour < 23)]
-                on_peak = month_df[
+                on_peak_df = month_df[
                     (month_df.index.hour >= 10) | (month_df.index.hour < 12) |
                     (month_df.index.hour >= 13) | (month_df.index.hour < 17)]
+            off_sum_df = off_peak_df['total1'].resample('1M').sum() / 1000.0
+            mid_sum_df = mid_peak_df['total1'].resample('1M').sum() / 1000.0
+            on_sum_df = on_peak_df['total1'].resample('1M').sum() / 1000.0
+            used_amount_list[target_month - 1] = [off_sum_df[0], mid_sum_df[0], on_sum_df[0]]
+    return used_amount_list
 
 
-get_data_list()
+month_calc.user_data.used_amount_list = get_data_list()
 
 # 비교 세트, 일반용과 산업용에 적용 가능
 # a number = class1 * 100 + class2 * 10 + class3 * 1
