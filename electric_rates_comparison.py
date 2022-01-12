@@ -46,24 +46,30 @@ def get_data_list() -> list:
             # 계시별 요금제 처리
             if 2 <= target_month < 11:
                 mid_peak_df = month_df[
-                    (month_df.index.hour >= 9) | (month_df.index.hour < 10) |
-                    (month_df.index.hour >= 12) | (month_df.index.hour < 13) |
-                    (month_df.index.hour >= 17) | (month_df.index.hour < 23)]
+                    ((month_df.index.hour >= 9) & (month_df.index.hour < 10)) |
+                    ((month_df.index.hour >= 12) & (month_df.index.hour < 13)) |
+                    ((month_df.index.hour >= 17) & (month_df.index.hour < 23))]
                 on_peak_df = month_df[
-                    (month_df.index.hour >= 10) | (month_df.index.hour < 12) |
-                    (month_df.index.hour >= 13) | (month_df.index.hour < 17)]
+                    ((month_df.index.hour >= 10) & (month_df.index.hour < 12)) |
+                    ((month_df.index.hour >= 13) & (month_df.index.hour < 17))]
             else:
                 mid_peak_df = month_df[
-                    (month_df.index.hour >= 9) | (month_df.index.hour < 10) |
-                    (month_df.index.hour >= 12) | (month_df.index.hour < 13) |
-                    (month_df.index.hour >= 17) | (month_df.index.hour < 23)]
+                    ((month_df.index.hour >= 9) & (month_df.index.hour < 10)) |
+                    ((month_df.index.hour >= 12) & (month_df.index.hour < 13)) |
+                    ((month_df.index.hour >= 17) & (month_df.index.hour < 23))]
                 on_peak_df = month_df[
-                    (month_df.index.hour >= 10) | (month_df.index.hour < 12) |
-                    (month_df.index.hour >= 13) | (month_df.index.hour < 17)]
+                    ((month_df.index.hour >= 10) & (month_df.index.hour < 12)) |
+                    ((month_df.index.hour >= 13) & (month_df.index.hour < 17))]
             off_sum_df = off_peak_df['total1'].resample('1M').sum() / 1000.0
             mid_sum_df = mid_peak_df['total1'].resample('1M').sum() / 1000.0
             on_sum_df = on_peak_df['total1'].resample('1M').sum() / 1000.0
-            used_amount_list[target_month - 1] = [off_sum_df[0], mid_sum_df[0], on_sum_df[0]]
+
+            # 월간 합을 사용량 리스트에 저장
+            try:    # 일부 데이터만 있는 경우 대응
+                used_amount_list[target_month - 1] = [off_sum_df[0], mid_sum_df[0], on_sum_df[0]]
+            except IndexError as ie:
+                print(ie)
+                pass
     return used_amount_list
 
 
@@ -109,7 +115,8 @@ for value in target_gen_obj:
 rates_title = target_rates_dict['description']
 
 data = {'title': 'result', 'id': 0, 'selector': selector,
-        'rates_title': rates_title, 'result_list': result_list}
+        'rates_title': rates_title, 'result_list': result_list,
+        'used_amount_list': month_calc.user_data.used_amount_list}
 res = requests.post('http://127.0.0.1:3000',
                     data=json.dumps(data), headers=headers)
 

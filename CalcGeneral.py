@@ -66,7 +66,6 @@ class CalcGeneral(CalcCharge):
         tmp_charge: float
         env_contribution, fuel_rate = CalcCharge.get_conf(self)
 
-
         summer: bool = 0  # 여름
         winter: bool = 0  # 겨울
         if self.used_amount_list[i] != [0, 0, 0]:   # v
