@@ -1,5 +1,5 @@
 # Electricity-Bill-Calculator
-* MonthCalc.py : 월별 요금 계산
+* **MonthCalc.py** : 월별 요금 계산
 * main.py : 단순 입출력에 이용
 * init.py : DB 입출력
 * Parser/requirements.txt : 테스트 파일의 dependancy
