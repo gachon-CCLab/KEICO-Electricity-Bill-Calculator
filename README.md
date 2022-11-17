@@ -1,5 +1,6 @@
 # Electricity-Bill-Calculator
 * **MonthCalc.py** : 월별 요금 계산
+* electric_rates_comparison.py : 요금제별 비교
 * main.py : 단순 입출력에 이용
 * init.py : DB 입출력
 * Parser/requirements.txt : 테스트 파일의 dependancy
